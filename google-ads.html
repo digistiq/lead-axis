@@ -17,7 +17,6 @@
 html{scroll-behavior:smooth;}
 body{background:#000;color:#fff;overflow-x:hidden;}
 
-/* SAME INDEX GRADIENT */
 body::before{
 content:"";
 position:fixed;
@@ -52,7 +51,6 @@ justify-content:center;font-weight:800;
 position:relative;color:#fff;text-decoration:none;
 font-family:'Share Tech',sans-serif;font-size:15px;
 }
-
 .nav-menu a::after{
 content:"";position:absolute;left:50%;bottom:-4px;
 width:0;height:2px;background:#f8a800;
@@ -62,17 +60,14 @@ transform:translateX(-50%);transition:.3s;
 .nav-menu a:hover::after{width:70%;}
 
 /* HAMBURGER */
-
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:22px;height:2px;background:#fff;}
 
 /* MOBILE NAV */
-
 .mobile-nav-overlay{
 position:fixed;inset:0;background:rgba(0,0,0,0.6);
 display:none;z-index:1500;
 }
-
 .mobile-nav{
 position:fixed;top:0;right:-100%;
 width:280px;height:100%;
@@ -80,7 +75,6 @@ background:rgba(0,0,0,0.95);
 padding:24px;transition:right .35s ease;
 z-index:1600;display:flex;flex-direction:column;
 }
-
 .mobile-nav.active{right:0;}
 .mobile-nav-overlay.active{display:block;}
 
@@ -89,24 +83,19 @@ display:flex;justify-content:space-between;
 align-items:center;font-family:'Share Tech',sans-serif;
 font-size:18px;
 }
-
 .mobile-close{font-size:28px;cursor:pointer;}
 
 .mobile-nav-links{display:flex;flex-direction:column;gap:22px;margin-top:40px;}
-.mobile-nav-links a{
-color:#fff;text-decoration:none;font-family:'Share Tech',sans-serif;
-}
+.mobile-nav-links a{color:#fff;text-decoration:none;font-family:'Share Tech',sans-serif;}
 
 /* ================= HERO ================= */
 
 .page-hero{
-padding-top:170px;padding-bottom:70px;text-align:center;
+padding-top:170px;padding-bottom:80px;text-align:center;
 }
-
 .page-hero h1{
 font-size:48px;font-family:'Share Tech',sans-serif;margin-bottom:20px;
 }
-
 .page-hero p{
 max-width:900px;margin:0 auto;
 font-size:18px;line-height:1.8;
@@ -116,15 +105,14 @@ font-family:'Share Tech',sans-serif;
 /* ================= CONTENT ================= */
 
 .content-wrapper{
-max-width:1100px;margin:0 auto;padding:80px 20px;
+max-width:1200px;margin:0 auto;padding:80px 20px;
 }
 
-.section{margin-bottom:110px;}
+.section{margin-bottom:120px;}
 
 .section-title{
 font-size:30px;font-family:'Share Tech',sans-serif;margin-bottom:25px;
 }
-
 .section-title::after{
 content:"";display:block;width:80px;height:3px;
 background:#f8a800;margin-top:10px;
@@ -135,34 +123,51 @@ font-size:16px;line-height:1.9;margin-bottom:22px;
 text-align:justify;color:#f0f0f0;
 }
 
-/* HIGHLIGHT BOX */
-
-.highlight-box{
-background:rgba(255,255,255,0.12);
-border:1px solid rgba(255,255,255,0.25);
-padding:40px;border-radius:20px;
-backdrop-filter:blur(14px);margin-top:30px;
-}
-
-/* STATS */
+/* STATS FIXED */
 
 .stats{
-display:grid;grid-template-columns:repeat(4,1fr);
-gap:30px;margin-top:40px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-top:50px;
 }
 
 .stat-box{
 background:rgba(255,255,255,0.1);
 border:1px solid rgba(255,255,255,0.2);
-padding:30px;border-radius:16px;text-align:center;
+border-radius:18px;
+padding:40px 20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+min-height:180px;
+text-align:center;
 }
 
-.stat-box h3{font-size:32px;font-weight:800;margin-bottom:10px;}
-.stat-box p{font-family:'Share Tech',sans-serif;font-size:14px;}
+.stat-box h3{
+font-size:34px;
+font-weight:800;
+margin-bottom:12px;
+min-height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.stat-box p{
+font-family:'Share Tech',sans-serif;
+font-size:14px;
+line-height:1.4;
+min-height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
 /* CTA */
 
-.cta-section{text-align:center;padding:120px 0;}
+.cta-section{text-align:center;padding:120px 20px;}
 .cta-btn{
 display:inline-block;padding:18px 48px;border-radius:999px;
 border:1px solid rgba(255,255,255,0.4);
@@ -183,7 +188,7 @@ text-align:center;
 /* RESPONSIVE */
 
 @media(max-width:992px){
-.stats{grid-template-columns:1fr 1fr;}
+.stats{grid-template-columns:repeat(2,1fr);}
 }
 
 @media(max-width:768px){
@@ -225,7 +230,6 @@ text-align:center;
 <span>Menu</span>
 <span class="mobile-close" id="closeBtn">&times;</span>
 </div>
-
 <div class="mobile-nav-links">
 <a href="index.html">Home</a>
 <a href="index.html#seo">SEO</a>
@@ -238,27 +242,20 @@ text-align:center;
 <section class="page-hero">
 <h1>Google Ads</h1>
 <p>
-Google Ads is a high-intent advertising ecosystem designed to capture users
-at the moment of decision. Unlike traditional advertising, it does not interrupt —
-it responds to demand. When users search, they signal intent. Google Ads allows
-your business to appear exactly at that signal.
+Google Ads allows your business to appear exactly when users are searching.
+It captures intent in real time and converts attention into measurable growth.
 </p>
 </section>
 
 <div class="content-wrapper">
 
 <div class="section">
-<div class="section-title">Understanding Search Intent</div>
+<div class="section-title">Why Google Ads Matters</div>
+
 <p>
-Search intent represents the strongest form of digital buying behavior.
-When someone types a query into Google, they are actively looking for
-information, comparison, or purchase. This makes Google Ads one of the
-highest return-on-investment channels in digital marketing.
-</p>
-<p>
-The power of Google Ads lies in its precision. Keywords are mapped based on
-intent stages — awareness, consideration, and conversion. Campaign structure
-is built around segmentation, ensuring budgets are allocated efficiently.
+Google processes billions of searches every day. Each search reflects intent —
+a need, a comparison, or a purchase decision. This makes Google Ads one of the
+highest-performing digital acquisition channels available.
 </p>
 
 <div class="stats">
@@ -279,38 +276,8 @@ is built around segmentation, ensuring budgets are allocated efficiently.
 <p>Performance Model</p>
 </div>
 </div>
-</div>
 
-<div class="section">
-<div class="section-title">Campaign Architecture</div>
-<p>
-Each campaign begins with deep keyword research, competitor analysis,
-search term clustering, and negative keyword filtration.
-Ad groups are structured around thematic intent clusters,
-ensuring relevance and Quality Score improvement.
-</p>
-
-<div class="highlight-box">
-<strong style="font-family:'Share Tech',sans-serif;">Execution Model:</strong><br><br>
-Strategic keyword mapping → Structured campaign build → Landing page alignment →
-Conversion tracking integration → Continuous A/B testing →
-Budget reallocation based on ROI.
 </div>
-</div>
-
-<div class="section">
-<div class="section-title">Optimization & Growth</div>
-<p>
-Google Ads is not a one-time setup. Performance is refined continuously.
-Metrics monitored include click-through rate, cost per acquisition,
-impression share, search term relevance, and conversion rate.
-</p>
-<p>
-Scaling occurs only when campaigns demonstrate sustainable profitability.
-The goal is long-term growth, not short-term spikes.
-</p>
-</div>
-
 </div>
 
 <section class="cta-section">
@@ -318,9 +285,7 @@ The goal is long-term growth, not short-term spikes.
 Ready to Capture High-Intent Traffic?
 </h2>
 
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20run%20Google%20Ads."
-target="_blank"
-class="cta-btn">
+<a href="#" class="cta-btn">
 Start Campaign →
 </a>
 </section>
@@ -348,10 +313,6 @@ function closeNav(){
 mobileNav.classList.remove('active');
 overlay.classList.remove('active');
 }
-
-document.querySelectorAll('.mobile-nav a').forEach(link=>{
-link.addEventListener('click',closeNav);
-});
 
 </script>
 
